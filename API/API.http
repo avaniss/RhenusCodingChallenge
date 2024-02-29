@@ -1,0 +1,6 @@
+@RhenusCodingChallenge.Server_HostAddress = http://localhost:5052
+
+GET {{RhenusCodingChallenge.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
