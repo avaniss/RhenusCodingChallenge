@@ -2,7 +2,17 @@
 
 ## Overview
 
-This repository contains an implementation of a **Betting API** which the users can use to bet on a number. 
+This repository contains an implementation of a **Betting API** which the users can use to play the betting game.
+
+### *Game Rules*
+   - This is a game of chance in which a random number between 0 - 9 is to be generated.
+   - A player will predict the random number.
+   - Upon registering, the player will have a starting account of 10,000 points and can wager them on a prediction which
+     they will either win or lose.
+   - Any number of points can be wagered.
+   - If the player is correct, they win 9 times their stake.
+   - If the player is incorrect, they lose their stake.
+
 The application is implemented in C# .net core using [FastEndpoints](https://fast-endpoints.com/) for the REST APIs.
 
 ## Prerequisites
@@ -16,7 +26,7 @@ The application is implemented in C# .net core using [FastEndpoints](https://fas
 3. Build the project.
 
 
-## Main architecture
+## Solution architecture
 
 ![alt text](./Resources/Architecture.png)
 
@@ -102,6 +112,7 @@ Database consists the following tables:
              * Username
              * Password
           3. Verify your details and click `Execute`
+          4. You can use [jwt.io](https://jwt.io/) to verify the token received in the response.
           
 
           Sample request:
@@ -216,7 +227,7 @@ to be learned. With a mindset of continous learning, I see following next steps:
  3. CI/CD pipelint having build/test/release steps.
  4. Learning about how to publish performance numbers of an API to some database like Prometheus, 
  and creating dashboads using tools like (Grafana).
- 5. Learning about setting up an alerting system that notifies developer when the application malfunctions.
+ 5. Learning about setting up an alerting system that notifies engineers when the application malfunctions.
 
 ## Contact
 
