@@ -11,7 +11,7 @@ public static class ConfigureServices
     {
         _ = services.AddSingleton<ExceptionHandlingMiddleware>();
         _ = services.AddHealthChecks();
-        _ = services.AddJWTBearerAuth(tokenSigningKey: configuration["Jwt:Key"]);
+        _ = services.AddJWTBearerAuth(tokenSigningKey: configuration["Jwt:Key"] ?? "ltvqfLYJlnLeDvZWEjtxsLntdLBrwWBmgp");
         _ = services.AddAuthorization();
         _ = services.AddFastEndpoints();
 

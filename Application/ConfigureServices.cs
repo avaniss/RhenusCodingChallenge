@@ -21,9 +21,9 @@ public static class ConfigureServices
 
         _ = services.AddSingleton<ISecurityTokenGenerator>(
             new JwtGenerator(
-              key: configuration["Jwt:Key"],
-              issuer: configuration["Jwt:Issuer"],
-              audience: configuration["Jwt:Audience"],
+              key: configuration["Jwt:Key"] ?? "ltvqfLYJlnLeDvZWEjtxsLntdLBrwWBmgp",
+              issuer: configuration["Jwt:Issuer"] ?? "Avani Patel",
+              audience: configuration["Jwt:Audience"] ?? "Internal Users",
               validityInHours: configuration.GetValue<int>("Jwt:ValidForHours"))
             );
 

@@ -32,7 +32,10 @@ namespace ApplicationTests.API
                         Content = new StringContent(payload, Encoding.UTF8, "application/json")
                     });
                 var response = await context.Content.ReadFromJsonAsync<AuthenticationCommandResponse>();
-                _token = response.Token;
+                if (response != null && !string.IsNullOrEmpty(response.Token))
+                {
+                    _token = response.Token;
+                }
             }
             return _token;
         }
